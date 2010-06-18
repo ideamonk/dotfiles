@@ -1,0 +1,8 @@
+include "/usr/share/themes/ThinIce/gtk-2.0/gtkrc"
+style "user-font" {
+	font_name = "DejaVu Sans Semi-Condensed 7"
+}
+widget_class "*" style "user-font"
+
+gtk-font-name="DejaVu Sans Semi-Condensed 7"
+
