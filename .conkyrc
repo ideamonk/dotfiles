@@ -6,4 +6,4 @@ use_spacer none
 double_buffer yes
 
 TEXT
-${mpd_smart (240)} ${if_empty ${exec awk '{print $2}' /proc/acpi/ac_adapter/AC0/state | grep 'on-line'}}^i(aason/Build/dwm/dzen/bat_full_01.xpm)${else}^i(/home/ideamonk/bin/dzen/ac_01.xpm)${endif} ${battery_time} ${battery_percent}%  ^i(/home/ideamonk/bin/dzen/cpu.xpm) ${cpu cpu0}% ^i(/home/ideamonk/bin/dzen/cpu.xpm) ${cpu cpu1}%  ^i(/home/ideamonk/bin/dzen/mem.xpm) ${mem} ^i(/home/ideamonk/bin/dzen/fs_01.xpm) root${fs_used_perc /}% home${fs_used_perc /home}% ^i(/home/ideamonk/bin/dzen/arch.xpm) ^fg(\#E0E0E0)${time %H:%M}^fg() 
+${mpd_smart (370)} ${if_empty ${exec awk '{print $2}' /proc/acpi/ac_adapter/AC0/state | grep 'on-line'}}^i(aason/Build/dwm/dzen/bat_full_01.xpm)${else}^i(/home/ideamonk/bin/dzen/ac_01.xpm)${endif} ${battery_time} ${battery_percent}%  ^i(/home/ideamonk/bin/dzen/cpu.xpm) ${cpu cpu0}% ^i(/home/ideamonk/bin/dzen/cpu.xpm) ${cpu cpu1}%  ^i(/home/ideamonk/bin/dzen/mem.xpm) ${mem} ^i(/home/ideamonk/bin/dzen/fs_01.xpm) root${fs_used_perc /}% home${fs_used_perc /home}% ^i(/home/ideamonk/bin/dzen/arch.xpm) ^fg(\#E0E0E0)${time %H:%M}^fg() 
