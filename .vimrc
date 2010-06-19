@@ -8,9 +8,9 @@ set ruler
 set incsearch
 
 " let em use mouse when available
-if has("mouse")
-	set mouse=a
-endif
+"if has("mouse")
+"	set mouse=a
+"endif
 
 " syntax hlightinh
 syntax on
