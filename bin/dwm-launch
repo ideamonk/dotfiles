@@ -1,0 +1,9 @@
+mpd &
+mpc ls | mpc add 
+conky &
+while true
+do
+echo "[`date '+%a %b %d %r'`"]
+sleep 2
+done | /usr/local/bin/dwm
+

@@ -22,3 +22,9 @@ GREEN="\[\033[0;32m\]"
 
 PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]] $GREEN\$ \[\033[m\]"
 
+MAIL=/var/spool/mail/ideamonk && export MAIL
+PATH=$PATH:/usr/local/bin
+DEFAULT=/var/spool/mail/ideamonk
+MAILDIR=$HOME/Mail
+LOGFILE=$HOME/.procmaillog 
+

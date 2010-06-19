@@ -2,12 +2,21 @@
 
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+/*
 static const char normbordercolor[] = "#cccccc";
 static const char normbgcolor[]     = "#cccccc";
 static const char normfgcolor[]     = "#000000";
 static const char selbordercolor[]  = "#0066ff";
 static const char selbgcolor[]      = "#0066ff";
 static const char selfgcolor[]      = "#ffffff";
+*/
+static const char normbordercolor[] = "#1B1B1B";
+static const char normbgcolor[]     = "#1D1D1D";
+static const char normfgcolor[]     = "#E6E6E6";
+static const char selbordercolor[]  = "#191919";
+static const char selbgcolor[]      = "#292929";
+static const char selfgcolor[]      = "#DEDEDE";
+
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -49,10 +58,31 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "uxterm", NULL };
 
+static const char *browsercmd[]         = { "chromium", NULL };
+static const char *mutecmd[]        	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
+static const char *volupcmd[] 		= { "amixer", "-q", "sset", "Master", "5+", "unmute", NULL };
+static const char *voldowncmd[]   	= { "amixer", "-q", "sset", "Master", "5-", "unmute", NULL }; 
+static const char *playcmd[]        	= { "mpc", "play", NULL };
+static const char *pausecmd[]       	= { "mpc", "pause", NULL };  
+static const char *prevcmd[]        = { "mpc", "prev", NULL };static const char *nextcmd[]        = { "mpc", "next", NULL };  
+
+
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,           XK_Return, spawn,          {.v = termcmd } },
+	// Music
+	{ MODKEY|ControlMask,		XK_p,   spawn,	   {.v = playcmd } },
+	{ MODKEY|ShiftMask,		XK_p,	   spawn,	   {.v = pausecmd } },
+	{ MODKEY|ControlMask,		XK_period,  spawn,	   {.v = nextcmd } },
+	{ MODKEY|ControlMask,		XK_comma,   spawn,	   {.v = prevcmd } },
+	// Volume
+	{ MODKEY|ControlMask,		XK_Up, 	   spawn,	   {.v = volupcmd } },
+	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = voldowncmd } },
+	// Tools
+	{ MODKEY|ControlMask,		XK_b,   spawn,	   {.v = browsercmd } },
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
