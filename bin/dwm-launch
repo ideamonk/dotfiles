@@ -1,8 +1,2 @@
-mpd &
-mpc ls | mpc add 
-while true
-do
-echo "[`date '+%a %b %d %r'`"]
-sleep 2
-done | /usr/local/bin/dwm
+/usr/local/bin/dwm
 

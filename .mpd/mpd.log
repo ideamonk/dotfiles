@@ -621,3 +621,9 @@ Jun 18 14:52 : ffmpeg: Open failed
 Jun 18 15:36 : ffmpeg: Open failed
 Jun 18 15:36 : ffmpeg: Open failed
 Jun 18 15:36 : ffmpeg: Open failed
+Jun 19 18:09 : ffmpeg: Open failed
+[mpeg @ 0x97601a0]max_analyze_duration reached
+[mpeg @ 0x9764fd0]max_analyze_duration reached
+Jun 19 18:28 : avahi: Client Disconnected, will reconnect shortly
+Jun 19 18:28 : avahi: Could not reconnect: Daemon not running
+Jun 19 18:33 : ffmpeg: Open failed

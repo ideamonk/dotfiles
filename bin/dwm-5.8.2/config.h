@@ -63,8 +63,11 @@ static const char *mutecmd[]        	= { "amixer", "-q", "sset", "Master", "togg
 static const char *volupcmd[] 		= { "amixer", "-q", "sset", "Master", "5+", "unmute", NULL };
 static const char *voldowncmd[]   	= { "amixer", "-q", "sset", "Master", "5-", "unmute", NULL }; 
 static const char *playcmd[]        	= { "mpc", "play", NULL };
-static const char *pausecmd[]       	= { "mpc", "pause", NULL };  
-static const char *prevcmd[]        = { "mpc", "prev", NULL };static const char *nextcmd[]        = { "mpc", "next", NULL };  
+static const char *pausecmd[]       	= { "mpc", "pause", NULL };
+static const char *seek_fwd[]		= { "mpc", "seek", "+20", NULL };
+static const char *seek_back[]		= { "mpc", "seek", "-20", NULL };
+static const char *prevcmd[]        	= { "mpc", "prev", NULL };
+static const char *nextcmd[]        	= { "mpc", "next", NULL };  
 
 
 
@@ -72,14 +75,21 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return, spawn,          {.v = termcmd } },
+
 	// Music
 	{ MODKEY|ControlMask,		XK_p,   spawn,	   {.v = playcmd } },
 	{ MODKEY|ShiftMask,		XK_p,	   spawn,	   {.v = pausecmd } },
 	{ MODKEY|ControlMask,		XK_period,  spawn,	   {.v = nextcmd } },
 	{ MODKEY|ControlMask,		XK_comma,   spawn,	   {.v = prevcmd } },
+
+	// Music Seek :D
+	{ MODKEY|ControlMask,		XK_Right,   spawn,	   {.v = seek_fwd } },
+	{ MODKEY|ControlMask,		XK_Left,    spawn,	   {.v = seek_back } },
+
 	// Volume
 	{ MODKEY|ControlMask,		XK_Up, 	   spawn,	   {.v = volupcmd } },
 	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = voldowncmd } },
+
 	// Tools
 	{ MODKEY|ControlMask,		XK_b,   spawn,	   {.v = browsercmd } },
 
