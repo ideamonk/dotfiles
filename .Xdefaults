@@ -55,7 +55,7 @@ Xcursor.size:   22
 ! rxvt-unicode ---------------------------------------------------------------
 
 !for antialiased fonts (using Xft)
-!urxvt*font:     xft:Envy Code R:pixelsize=13
+urxvt*font:      xft:Moncao:pixelsize=11
 !urxvt*font:     xft:dejavu sans mono:pixelsize=14
 !urxvt*boldFont: xft:dejavu sans mono:pixelsize=14
 !urxvt*font:     xft:Pragmata:pixelsize=13
@@ -64,8 +64,8 @@ Xcursor.size:   22
 !for normal X11 fonts:
 !urxvt*font:      -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 !urxvt*boldFont:  -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
-urxvt*font:      -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-urxvt*boldFont:  -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+#urxvt*font:      -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+#urxvt*boldFont:  -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 !urxvt*font:      -*-proggyclean-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont:  -*-proggyclean-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*font:      -*-proggysquaresz-*-*-*-*-*-*-*-*-*-*-*-*
