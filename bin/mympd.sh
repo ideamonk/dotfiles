@@ -1,5 +1,5 @@
 #!/bin/bash
-mpd &
+mpd 
 mpc ls | mpc add
 mpc random on &
 

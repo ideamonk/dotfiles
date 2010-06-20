@@ -68,6 +68,8 @@ static const char *seek_fwd[]		= { "mpc", "seek", "+20", NULL };
 static const char *seek_back[]		= { "mpc", "seek", "-20", NULL };
 static const char *prevcmd[]        	= { "mpc", "prev", NULL };
 static const char *nextcmd[]        	= { "mpc", "next", NULL };  
+static const char *katecmd[]        	= { "kate", NULL };  
+static const char *dolphincmd[]        	= { "dolphin", NULL };  
 
 
 
@@ -92,6 +94,9 @@ static Key keys[] = {
 
 	// Tools
 	{ MODKEY|ControlMask,		XK_b,   spawn,	   {.v = browsercmd } },
+	{ MODKEY|ControlMask,		XK_d,   spawn,	   {.v = dolphincmd } },
+	{ MODKEY|ControlMask,		XK_k,   spawn,	   {.v = katecmd } },
+
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
