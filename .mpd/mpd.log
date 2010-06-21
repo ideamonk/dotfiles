@@ -681,3 +681,6 @@ Jun 20 15:20 : update: added The_Best_Hip_Hop_Party_Hits-2CD-2010-COCMP3 seeded 
 Jun 20 15:20 : update: added The_Best_Hip_Hop_Party_Hits-2CD-2010-COCMP3 seeded by www.p2p-crew.to/202-brian_mcknight-i_miss_you-cocmp3.mp3
 Jun 20 15:20 : update: added The_Best_Hip_Hop_Party_Hits-2CD-2010-COCMP3 seeded by www.p2p-crew.to/115-lil_jon_and_the_east_side_boyz-get_low-cocmp3.mp3
 Jun 20 15:20 : update: added The_Best_Hip_Hop_Party_Hits-2CD-2010-COCMP3 seeded by www.p2p-crew.to/110-lumidee-crazy-cocmp3.mp3
+[flv @ 0x8cb1e60]Estimating duration from bitrate, this may be inaccurate
+[flv @ 0x8cd6fc0]Estimating duration from bitrate, this may be inaccurate
+[aac @ 0x8cd2210]Transition from an ONLY_LONG or LONG_STOP to an EIGHT_SHORT sequence detected. If you heard an audible artifact, please submit the sample to the FFmpeg developers.

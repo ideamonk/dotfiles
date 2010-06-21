@@ -12,8 +12,6 @@
 #exec awesome
 #exec fluxbox
 
-# try for lcd
-xrandr -s 1920x1080 &
 
 ~/bin/mympd.sh &
 ~/bin/myconky.sh &
