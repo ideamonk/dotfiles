@@ -28,7 +28,8 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       False,       -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       True,        -1 },
+	{ "Chromium", NULL,	  NULL,	      0,	    True,	 -1 },
 	//{ "Chromium", NULL,	  NULL,       1 << 8,       True,        -1 },
 };
 
@@ -58,7 +59,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
-static const char *browsercmd[]         = { "chromium", NULL };
+static const char *browsercmd[]         = { "chromium-browser", NULL };
 static const char *mutecmd[]        	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
 static const char *volupcmd[] 		= { "amixer", "-q", "sset", "Master", "5+", "unmute", NULL };
 static const char *voldowncmd[]   	= { "amixer", "-q", "sset", "Master", "5-", "unmute", NULL }; 

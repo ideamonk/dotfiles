@@ -22,5 +22,5 @@ GREEN="\[\033[0;32m\]"
 
 PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]] $GREEN\$ \[\033[m\]"
 
-PATH=$PATH:/usr/local/bin:/home/ideamonk/.gem/ruby/1.9.1/bin
+PATH=$PATH:/sbin:/usr/local/bin
 
