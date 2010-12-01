@@ -25,3 +25,5 @@ PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]] $GRE
 PATH=$PATH:/sbin:/usr/local/bin
 
 alias yum='sudo yum --disablerepo pgdg83'
+alias yumdownloader='yumdownloader --disablerepo pgdg83'
+
