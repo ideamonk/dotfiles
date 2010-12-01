@@ -29,7 +29,6 @@ endif
 highlight Normal guibg=grey90
 
 "colorscheme xoria256
-colorscheme miromiro
 
 " some pythonic stuff from elsewere
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
