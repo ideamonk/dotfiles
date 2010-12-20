@@ -27,3 +27,5 @@ PATH=$PATH:/sbin:/usr/local/bin
 alias yum='sudo yum --disablerepo pgdg83'
 alias yumdownloader='yumdownloader --disablerepo pgdg83'
 
+
+alias tree="find . -name .svn -prune -o -name .DS_Store -prune -o -name .git -prune --print | sed -e 's;[^/]*/;|___;g;s;___|; |;g'"
