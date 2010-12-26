@@ -1,9 +1,7 @@
 #!/bin/bash
-AUTH="user:password"
-BASE="http://example.com/"
 METHOD=$1
-DEST="$BASE$2"
-XML=$3
+DEST="$2"
+JSON=$3
  
 # make sure args were passed
 if [ $# -eq 0 ]; then
@@ -13,10 +11,9 @@ if [ $# -eq 0 ]; then
                         fi
                          
 # execute CURL call
-curl -H 'Accept: application/xml' -H 'Content-Type: application/xml' -w '\nHTTP STATUS: %{http_code}\nTIME: %{time_total}\n' \
+curl -H 'Accept: application/json' -H 'Content-Type: application/json' -w '\nHTTP STATUS: %{http_code}\nTIME: %{time_total}\n' \
 -X $METHOD \
--d "$XML" \
--u "$AUTH" \
+-d "$JSON" \
 "$DEST"
  
 exit 0
