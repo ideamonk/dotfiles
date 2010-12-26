@@ -11,7 +11,7 @@ if [ $# -eq 0 ]; then
                         fi
                          
 # execute CURL call
-curl -H 'Accept: application/json' -H 'Content-Type: application/json' -w '\nHTTP STATUS: %{http_code}\nTIME: %{time_total}\n' \
+curl -i -H "Accept: application/json"  -w '\nHTTP STATUS: %{http_code}\nTIME: %{time_total}\n' \
 -X $METHOD \
 -d "$JSON" \
 "$DEST"
