@@ -88,3 +88,6 @@ let g:pydiction_location = '/Users/ideamonk/.vim/after/ftplugin/complete-dict'
 " Get this plugin from http://www.vim.org/scripts/script.php?script_id=1112
 " Pressing "K" takes you to the documentation for the word under the cursor.
 autocmd filetype python source ~/.vim/pydoc.vim
+
+
+nnoremap NN :NERDTreeToggle<CR>
