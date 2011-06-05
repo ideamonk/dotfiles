@@ -1,6 +1,3 @@
-" store last 50 cmds
-set history=50
-
 " show cursor pos all time
 set ruler
 
