@@ -13,22 +13,14 @@ set ignorecase
 "	set mouse=a
 "endif
 
-" syntax hlightinh
+" syntax hlighting
 syntax on
 
 " hilight last search
 set hlsearch
 
-if has("autocmd")
-	" enable filetype detection
-	filetype plugin indent on
-else
-	set autoindent
-endif
-
-highlight Normal guibg=grey90
-
-"colorscheme xoria256
+set background=dark
+colorscheme solarized
 
 " some pythonic stuff from elsewere
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
@@ -53,21 +45,6 @@ set number
 " no wraps
 set wrap!
 
-
-" when we have a colored terminal or gui...
-if &t_Co > 2 || has("gui_running")
-    " ...then use highlighting
-    syntax on
-endif
-
-if has("gui_running")
-    "Standartgroesse bei'm GUI-Fenster
-    "columns    width of the display
-    set co=98
-    "lines      number of lines in the display
-    set lines=41
-endif
-
 " how many lines to sync backwards
 syn sync minlines=10000 maxlines=10000
 
@@ -82,11 +59,32 @@ let php_sql_query = 1
 let php_minlines=1200
 let php_htmlInStrings=1
 
-" use white background in GUI-Mode, black on console
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
-if has("gui_running") 
-"|| &term=="xterm"
-    set bg=light
-else
-    set bg=dark
-endif
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+
+filetype plugin indent on
+filetype plugin on
+
+" Taglist variables
+" Display function name in status bar:
+let g:ctags_statusline=1
+" Automatically start script
+let generate_tags=1
+" Displays taglist results in a vertical window:
+let Tlist_Use_Horiz_Window=0
+" Shorter commands to toggle Taglist display
+nnoremap TT :TlistToggle<CR>
+map <F4> :TlistToggle<CR>
+" Various Taglist diplay config:
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_File_Fold_Auto_Close = 1
+
+let g:pydiction_location = '/Users/ideamonk/.vim/after/ftplugin/complete-dict'
+
+" Get this plugin from http://www.vim.org/scripts/script.php?script_id=1112
+" Pressing "K" takes you to the documentation for the word under the cursor.
+autocmd filetype python source ~/.vim/pydoc.vim
