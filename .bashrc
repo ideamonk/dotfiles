@@ -1,3 +1,5 @@
+# NOTE unused, old, linux
+
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -24,6 +26,7 @@ PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]] $GRE
 
 PATH=$PATH:/sbin:/usr/local/bin
 
+# AOL/fedora stuff
 alias yum='sudo yum --disablerepo pgdg83'
 alias yumdownloader='yumdownloader --disablerepo pgdg83'
 

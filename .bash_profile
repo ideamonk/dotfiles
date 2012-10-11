@@ -1,4 +1,6 @@
-#git
+# NOTE unused, I've switched to zsh, keeping this for old time's sake
+
+# git completion
 source ~/.git-completion.bash
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -9,13 +11,16 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-# Check for an interactive session
+# check for an interactive session
 [ -z "$PS1" ] && return
 
+# colors
 alias ls='ls -G'
-#Alias xterm="xterm -fa ‘Consolas:pixelsize=12’ -bg black -fg white -dc"
-#alias xterm="xterm -bg black -fg white -dc"
-#PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]]$ "
+
+# useful when using dwm and the likes
+# Alias xterm="xterm -fa ‘Consolas:pixelsize=12’ -bg black -fg white -dc"
+# alias xterm="xterm -bg black -fg white -dc"
+# PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]]$ "
 
 TERM=xterm-256color
 
@@ -25,26 +30,31 @@ GREEN="\[\033[0;32m\]"
 
 PS1="[\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]] $GREEN\$ \[\033[m\]"
 
-#export ANT_HOME=/Users/ideamonk/svn.cm.aol.com/winston/build-support/apache-ant/bin:$ANT_HOME
+# export ANT_HOME=/Users/ideamonk/svn.cm.aol.com/winston/build-support/apache-ant/bin:$ANT_HOME
 
 # Winston ant
-#export PATH=/Users/ideamonk/svn.cm.aol.com/winston/build-support/apache-ant/bin:/Users/ideamonk/bin/:/Users/ideamonk/python2.6.5/bin/:/Users/ideamonk/jython2.5.2rc2/bin/:$PATH
+# export PATH=/Users/ideamonk/svn.cm.aol.com/winston/build-support/apache-ant/bin:/Users/ideamonk/bin/:/Users/ideamonk/python2.6.5/bin/:/Users/ideamonk/jython2.5.2rc2/bin/:$PATH
 
-export PATH=/Users/ideamonk/bin/:/Users/ideamonk/python2.6.5/bin/:/Users/ideamonk/jython2.5.2rc2/bin/:/Users/ideamonk/.gem/ruby/1.8/bin/:$PATH
+# prefer ~/bin , prefer custom python build
+# NOTE: old, unused
+export PATH=~/bin/:~/python2.6.5/bin/:~/.gem/ruby/1.8/bin/:$PATH
 
 # lucene 3.0.3
 export CLASSPATH=/Users/ideamonk/Code/lucene-3.0.3/build/lucene-core-3.0.3-dev.jar:/Users/ideamonk/Code/lucene-3.0.3/build/lucene-demos-3.0.3-dev.jar:$CLASSPATH
 
-
+# a nice tree command
 alias tree="find . -name .svn -prune -o -name .DS_Store -prune -o -name .git -prune -o -print | sed -e 's;[^/]*/;|___;g;s;___|; |;g'"
+
+# fun with cow
 alias cow="fortune -s -n 100 | cowsay -f `ls -1 /usr/local/Cellar/cowsay/3.03/share/cows/ | sed s/\.cow// | tail -n +\`echo $(( 1 + (\\\`od -An -N2 -i /dev/random\\\`) % (\\\`ls -1 /usr/local/Cellar/cowsay/3.03/share/cows/ | wc -l\\\`) ))\` | head -1`"
 
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/spidermonkey/lib/
 
+# clojure stuff, we now have homebrew to save time
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 
+# grep with colors
 alias grep='grep --color=auto'
-
 
 
 # COMMAND HISTORY
@@ -82,7 +92,7 @@ function hi(){
 alias h='history'
 
 
-export ANDROID_NDK_ROOT=/Users/ideamonk/Code/android-ndk-r5b
+export ANDROID_NDK_ROOT=~/Code/android-ndk-r5b
 
 alias ctags="`brew --prefix`/bin/ctags"
 alias pydoc=/usr/bin/pydoc2.6 # messed up my pydoc while configuring
