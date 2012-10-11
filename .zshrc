@@ -269,3 +269,5 @@ function chrome_mobile() {
 # ALIASES 
 # ----------------------------------------------------------------------
 alias rspec='nocorrect rspec'
+alias edit='emacsclient --no-wait -c -f="((width . 120))"'
+alias vim='edit'
