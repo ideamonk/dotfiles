@@ -111,7 +111,7 @@ alias  ....='../../..'
 alias  .....='../../../..'
 alias  ll='ls -lah'
 alias  sl='ls -lah'
-alias  l='ls -la'
+alias  l='ls -lah'
 
 show-colors() {
     for line in {0..17}; do
