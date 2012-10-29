@@ -109,7 +109,7 @@ alias -- -='cd -'
 alias  ...='../..'
 alias  ....='../../..'
 alias  .....='../../../..'
-alias  ll='ls -lah'
+alias  ll='ls -la'
 alias  sl='ls -lah'
 alias  l='ls -lah'
 
