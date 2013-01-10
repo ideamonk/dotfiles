@@ -208,13 +208,8 @@ LC_ALL=en_US.UTF-8
 # PATH settings
 # ----------------------------------------------------------------------
 PATH=~/bin:/usr/local/bin:$PATH;
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export NODE_PATH="/usr/local/lib/node"
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-
-# RVM
-# ----------------------------------------------------------------------
-source ~/.rvm/scripts/rvm
 
 # HELPERS
 # ----------------------------------------------------------------------
@@ -276,3 +271,17 @@ function start_mongo() {
 alias rspec='nocorrect rspec'
 alias edit='emacsclient --no-wait -c -f="((width . 120))"'
 alias vim='edit'
+
+
+# Setup port forwarding for Vagrant
+# ----------------------------------------------------------------------
+function setup_port80 {
+    sudo ipfw add 100 fwd 127.0.0.1,8080 tcp from any to me 80
+}
+
+
+function setup_sshfs {
+    cd ~/isbox
+    mkdir www
+    sshfs vagrant@192.168.33.10:/var/www/ ./www -ocache=no -onolocalcaches -ovolname=www
+}
